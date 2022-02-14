@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Futickets">
         <activity
+            android:name=".views.TicketsList"
+            android:exported="false" />
+        <activity
+            android:name=".views.Main"
+            android:exported="false" />
+        <activity
             android:name=".views.Register"
             android:exported="false" />
         <activity

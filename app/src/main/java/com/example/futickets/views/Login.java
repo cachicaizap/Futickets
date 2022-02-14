@@ -21,4 +21,10 @@ public class Login extends AppCompatActivity {
         startActivity(register);
         finish();
     }
+
+    public void goToMainDisplay(View view){
+        Intent main = new Intent(this, Main.class);
+        startActivity(main);
+        finish();
+    }
 }

@@ -33,7 +33,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Serie A de Ecuador" />
+                android:text="Serie A de Ecuador" />
 
             <TextView
                 android:id="@+id/txtHora"
@@ -90,7 +90,7 @@
                 app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toEndOf="@+id/imageLogoUno"
                 app:layout_constraintTop_toBottomOf="@+id/txtFecha"
-                tools:text="vs" />
+                android:text="vs" />
 
             <TextView
                 android:id="@+id/txtRonda"
@@ -147,7 +147,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
                 android:gravity="fill_horizontal"
-                android:text="true"
+                tools:text="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

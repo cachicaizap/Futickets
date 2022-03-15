@@ -3,33 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable-v24/ic_email_24.xml" value="0.309" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/empty_tall_divider.xml" value="0.309" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_add_24.xml" value="0.309" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_close_24.xml" value="0.309" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_key_24.xml" value="0.309" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_launcher_background.xml" value="0.309" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_login_logo.xml" value="0.276" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_logo_claro.xml" value="0.276" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_logo_oscuro.xml" value="0.276" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_password_24.xml" value="0.309" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_sing_in.xml" value="0.276" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/splashscreen.xml" value="0.351" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/font/allerta.xml" value="0.396875" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/font/cabin.xml" value="0.21822916666666667" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/font/font.xml" value="0.396875" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/drawable/ic_favorite_24.xml" value="0.181" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/drawable/ic_favorite_border_12.xml" value="0.159" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/font/font.xml" value="0.234375" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/activity_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/fragment_favorite.xml" value="0.20416666666666666" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/fragment_setting.xml" value="0.33" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/fragment_shop.xml" value="0.20416666666666666" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/fragment_ticket.xml" value="0.25" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/fragment_tickets.xml" value="0.20416666666666666" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/header_navigation_drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/layout/tickets_items.xml" value="0.20416666666666666" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/menu/bottom_bar_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Documentos/GitHub/Futickets/app/src/main/res/menu/navigation_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/activity_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/activity_tickets_list.xml" value="0.33" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/fragment_favorites.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/fragment_settings.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/fragment_shopping.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/fragment_tickets.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/header_navigation_drawer.xml" value="0.33" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/item_list.xml" value="0.4523809523809524" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/menu/bottom_bar_menu.xml" value="0.33" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/menu/navigation_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/header_navigation_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/item_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/tickets_items.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

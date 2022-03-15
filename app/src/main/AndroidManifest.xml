@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.futickets">
+    package="com.futbol.futickets">
 
     <application
         android:allowBackup="true"
@@ -10,19 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Futickets">
         <activity
-            android:name=".views.TicketsList"
+            android:name=".presentacion.ItemActivity"
             android:exported="false" />
         <activity
-            android:name=".views.Main"
+            android:name=".presentacion.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".views.Register"
+            android:name=".presentacion.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".views.Login"
+            android:name=".presentacion.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".views.SplashFutickets"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

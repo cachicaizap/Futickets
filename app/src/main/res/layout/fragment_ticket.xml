@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/fst_color"
     tools:context=".presentacion.TicketFragment">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -35,7 +34,7 @@
         android:indeterminate="true"
         android:visibility="gone"
         android:theme="@style/Widget.MaterialComponents.CircularProgressIndicator.Medium"
-        app:indicatorColor="@android:color/holo_orange_dark"
+        app:indicatorColor="@android:color/black"
         app:layout_constraintBaseline_toBottomOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

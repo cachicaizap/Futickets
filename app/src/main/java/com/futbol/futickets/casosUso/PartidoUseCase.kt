@@ -9,47 +9,27 @@ class PartidoUseCase {
     private val partidoslist = listOf<Partido>(
         Partido(
             "Aucas",
-            "https://ssl.gstatic.com/onebox/media/sports/logos/aZvLUY_82UUB0czzaA7c8g_48x48.png",
+            "https://suramericafc.com/Files/Futbolistas%20destacados/579ec84fa97a480c8e25af3bf0958137/ecuaucas190x227.png",
             "Delfín",
-            "https://ssl.gstatic.com/onebox/media/sports/logos/7k2Pzhqaiqe7GBGqb06t3A_48x48.png",
+            "https://ldu.com.ec/web/wp-content/uploads/2015/06/Delfin_SC_Logo.png",
             "Primera ronda",
             false,
             "2022-02-26",
             "15:30",
-            "Chillogallo"
+            "Chillogallo",
+            "https://p7s5h3q6.stackpathcdn.com/wp-content/uploads/2021/04/CZIVPU_WQAA0bgB.jpg"
         ),
         Partido(
             "U. Católica",
-            "https://ssl.gstatic.com/onebox/media/sports/logos/xR8t4XRhh-fUtJuT3QrCVA_48x48.png",
+            "https://ssl.gstatic.com/onebox/media/sports/logos/xR8t4XRhh-fUtJuT3QrCVA_96x96.png",
             "Guayaquil City",
-            "https://ssl.gstatic.com/onebox/media/sports/logos/rPA25xoGMWl1tQ1e9US_Kw_48x48.png",
+            "https://2.bp.blogspot.com/-FbRcIvqMwV4/XDvchd4WeAI/AAAAAAABTvc/m2UBvGcEYJkmR5oUIKLJgaZlRsq8MddCQCLcBGAs/s1600/Guayaquil%2BCity%2BFC.png",
             "Primera ronda",
             false,
             "2022-02-26",
             "17:30",
-            "Olimpico Atahualpa"
-        ),
-        Partido(
-            "Aucas",
-            "https://ssl.gstatic.com/onebox/media/sports/logos/aZvLUY_82UUB0czzaA7c8g_48x48.png",
-            "Delfín",
-            "https://ssl.gstatic.com/onebox/media/sports/logos/7k2Pzhqaiqe7GBGqb06t3A_48x48.png",
-            "Primera ronda",
-            false,
-            "2022-02-26",
-            "15:30",
-            "Chillogallo"
-        ),
-        Partido(
-            "U. Católica",
-            "https://ssl.gstatic.com/onebox/media/sports/logos/xR8t4XRhh-fUtJuT3QrCVA_48x48.png",
-            "Guayaquil City",
-            "https://ssl.gstatic.com/onebox/media/sports/logos/rPA25xoGMWl1tQ1e9US_Kw_48x48.png",
-            "Primera ronda",
-            false,
-            "2022-02-26",
-            "17:30",
-            "Olimpico Atahualpa"
+            "Olimpico Atahualpa",
+            "https://imagenes.expreso.ec/files/image_700_402/uploads/2020/01/14/5e1deb5f3b90f.jpeg"
         )
     )
 

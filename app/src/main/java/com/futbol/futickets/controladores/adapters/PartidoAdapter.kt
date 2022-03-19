@@ -9,7 +9,8 @@ import com.futbol.futickets.databinding.ItemListBinding
 import com.futbol.futickets.entidades.Partido
 import com.squareup.picasso.Picasso
 
-class PartidoAdapter(val partidoItemList: List<Partido>) : RecyclerView.Adapter<PartidoViewHolder>() {
+class PartidoAdapter(val partidoItemList: List<Partido>, val onClickItemSelected:(Partido) -> Unit) :
+    RecyclerView.Adapter<PartidoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PartidoViewHolder {
         var layoutInflater = LayoutInflater.from(parent.context)
@@ -19,7 +20,7 @@ class PartidoAdapter(val partidoItemList: List<Partido>) : RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: PartidoViewHolder, position: Int) {
         val item = partidoItemList[position]
-        holder.render(item)
+        holder.render(item, onClickItemSelected)
     }
 
     override fun getItemCount(): Int {
@@ -33,7 +34,7 @@ class PartidoViewHolder(partidoView: View) : RecyclerView.ViewHolder(partidoView
 
     val binding = ItemListBinding.bind(partidoView)
 
-    fun render(item: Partido){
+    fun render(item: Partido, onClickItemSelected:(Partido) -> Unit){
         binding.txtEquipoUno.text = item.teamone
         binding.txtEquipoDos.text = item.teamtwo
         binding.textBoolean.text = item.avaible.toString()
@@ -43,6 +44,10 @@ class PartidoViewHolder(partidoView: View) : RecyclerView.ViewHolder(partidoView
 
         Picasso.get().load(item.imgone).into(binding.imageLogoUno)
         Picasso.get().load(item.imgtwo).into(binding.imageLogoDos)
+
+        itemView.setOnClickListener{
+            onClickItemSelected(item)
+        }
     }
 
 }

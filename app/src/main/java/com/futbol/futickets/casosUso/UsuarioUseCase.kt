@@ -1,15 +1,15 @@
 package com.futbol.futickets.casosUso
 
-import com.futbol.futickets.entidades.Usuario
+import com.futbol.futickets.data.database.entidades.UsuarioEntity
 
 class UsuarioUseCase {
 
-    private val usuariosDb = listOf<Usuario>(
-        Usuario("Carlos","Chiciaza","cachicaizap","cachicaizap@gmail.com","12345")
+    private val usuariosDb = listOf<UsuarioEntity>(
+        UsuarioEntity("1","Carlos","Chiciaza","cachicaizap","cachicaizap@gmail.com","12345")
     )
 
-    fun getVerifiedUser(name:String , pass: String): Usuario {
-        var user = Usuario()
+    fun getVerifiedUser(name:String , pass: String): UsuarioEntity {
+        var user = UsuarioEntity()
 
         usuariosDb.forEach(){
             if (it.username == name && it.password == pass){

@@ -1,13 +1,16 @@
 package com.futbol.futickets.casosUso
 
-import com.futbol.futickets.entidades.Partido
-import java.sql.Time
-import java.util.*
+import com.futbol.futickets.data.api.FutRetrofitApi
+import com.futbol.futickets.data.api.entidades.toPartidoEntity
+import com.futbol.futickets.data.api.service.PartidoService
+import com.futbol.futickets.data.database.entidades.PartidoEntity
+import com.futbol.futickets.utils.Futicket
 
 class PartidoUseCase {
 
-    private val partidoslist = listOf<Partido>(
-        Partido(
+    private val partidoslist = listOf<PartidoEntity>(
+        PartidoEntity(
+            "1",
             "Aucas",
             "https://suramericafc.com/Files/Futbolistas%20destacados/579ec84fa97a480c8e25af3bf0958137/ecuaucas190x227.png",
             "Delfín",
@@ -19,7 +22,8 @@ class PartidoUseCase {
             "Chillogallo",
             "https://p7s5h3q6.stackpathcdn.com/wp-content/uploads/2021/04/CZIVPU_WQAA0bgB.jpg"
         ),
-        Partido(
+        PartidoEntity(
+            "2",
             "U. Católica",
             "https://ssl.gstatic.com/onebox/media/sports/logos/xR8t4XRhh-fUtJuT3QrCVA_96x96.png",
             "Guayaquil City",
@@ -33,7 +37,35 @@ class PartidoUseCase {
         )
     )
 
-    fun getAllPartidos(): List<Partido>{
-        return partidoslist
+    suspend fun getAllPartidos(): List<PartidoEntity>{
+        var resp: MutableList<PartidoEntity> = ArrayList<PartidoEntity>()
+        val service = FutRetrofitApi.getFutApi().create(PartidoService::class.java)
+        val call = service.fetchGames()
+        resp = if(call.isSuccessful){
+            val body = call.body()
+            body!!.map {
+                it.toPartidoEntity()
+            } as MutableList<PartidoEntity>
+        }else{
+            ArrayList<PartidoEntity>()
+        }
+        return resp
+    }
+
+    suspend fun getFavoritesPartidos(): List<PartidoEntity> {
+        val db = Futicket.getDatabase()
+        return db.partidoDao().getAllPartidos()
+    }
+
+    suspend fun savePartidoFavPart(partido: PartidoEntity) {
+        Futicket.getDatabase().partidoDao().insertPartido(partido)
+    }
+
+    suspend fun deletePartidoFavPart(partido: PartidoEntity) {
+        Futicket.getDatabase().partidoDao().deletePartidoById(partido.id)
+    }
+
+    suspend fun getOnePartido(id: String): PartidoEntity {
+        return Futicket.getDatabase().partidoDao().getPartidoById(id)
     }
 }

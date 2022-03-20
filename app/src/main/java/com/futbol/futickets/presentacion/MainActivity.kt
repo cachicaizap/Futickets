@@ -1,6 +1,5 @@
 package com.futbol.futickets.presentacion
 
-import android.content.Intent
 import com.futbol.futickets.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 import com.futbol.futickets.R

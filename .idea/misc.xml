@@ -33,11 +33,12 @@
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_shopbag_24.xml" value="0.302" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_sing_in.xml" value="0.302" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/drawable/ic_ticket_24.xml" value="0.302" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/activity_item.xml" value="0.33" />
+        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/activity_item.xml" value="0.25" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/fragment_favorite.xml" value="0.1361111111111111" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/fragment_favorites.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/fragment_shopping.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/fragment_ticket.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/fragment_ticket.xml" value="0.18" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/header_navigation_drawer.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/item_list.xml" value="0.33" />
         <entry key="..\:/Users/cachi/Documents/GitHub/Futickets/app/src/main/res/layout/tickets_items.xml" value="0.36666666666666664" />

@@ -5,15 +5,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.futbol.futickets.controladores.adapters.PartidoAdapter
 import com.futbol.futickets.databinding.FragmentTicketBinding
-import com.futbol.futickets.entidades.Partido
+import com.futbol.futickets.data.database.entidades.PartidoEntity
 import com.futbol.futickets.logica.PartidoBL
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.encodeToString
@@ -36,9 +35,7 @@ class TicketFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         binding.progressBar.visibility = View.VISIBLE
-
-
-        GlobalScope.launch(Dispatchers.Main) {
+        lifecycleScope.launch(Dispatchers.Main) {
             val ltsPartidos = withContext(Dispatchers.IO){
                 PartidoBL().getPartidosList()
             }
@@ -46,14 +43,16 @@ class TicketFragment : Fragment() {
         }
     }
 
-    fun loadPartidos(items: List<Partido>){
-        binding.listRecyclerView.layoutManager = LinearLayoutManager(binding.listRecyclerView.context)
-        binding.listRecyclerView.adapter = PartidoAdapter(items) { getPartidoItem(it) }
+    fun loadPartidos(items: List<PartidoEntity>){
+        binding.listRecyclerView.adapter =
+            PartidoAdapter(items) { getPartidoItem(it) }
+        binding.listRecyclerView.layoutManager =
+            LinearLayoutManager(binding.listRecyclerView.context)
         binding.progressBar.visibility = View.INVISIBLE
     }
 
-    fun getPartidoItem(item: Partido){
-        var intent = Intent(binding.listRecyclerView.context, ItemActivity::class.java)
+    fun getPartidoItem(item: PartidoEntity){
+        var intent = Intent(activity, ItemActivity::class.java)
         val jsonString = Json.encodeToString(item)
         intent.putExtra("partido", jsonString)
         startActivity(intent)

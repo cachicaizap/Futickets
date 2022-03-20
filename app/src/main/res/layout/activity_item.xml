@@ -51,6 +51,7 @@
                     tools:text="Hora" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButtonItem"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:layout_alignParentTop="true"

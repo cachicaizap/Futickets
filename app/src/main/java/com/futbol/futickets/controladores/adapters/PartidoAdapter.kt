@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.futbol.futickets.R
 import com.futbol.futickets.databinding.ItemListBinding
-import com.futbol.futickets.entidades.Partido
+import com.futbol.futickets.data.database.entidades.PartidoEntity
 import com.squareup.picasso.Picasso
 
-class PartidoAdapter(val partidoItemList: List<Partido>, val onClickItemSelected:(Partido) -> Unit) :
+class PartidoAdapter(val partidoItemList: List<PartidoEntity>, val onClickItemSelected:(PartidoEntity) -> Unit) :
     RecyclerView.Adapter<PartidoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PartidoViewHolder {
@@ -34,7 +34,7 @@ class PartidoViewHolder(partidoView: View) : RecyclerView.ViewHolder(partidoView
 
     val binding = ItemListBinding.bind(partidoView)
 
-    fun render(item: Partido, onClickItemSelected:(Partido) -> Unit){
+    fun render(item: PartidoEntity, onClickItemSelected:(PartidoEntity) -> Unit){
         binding.txtEquipoUno.text = item.teamone
         binding.txtEquipoDos.text = item.teamtwo
         binding.textBoolean.text = item.avaible.toString()

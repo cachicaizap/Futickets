@@ -50,25 +50,14 @@
                     android:textStyle="bold"
                     tools:text="Hora" />
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButtonItem"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="11dp"
-                    android:layout_marginEnd="14dp"
-                    app:backgroundTint="@color/purple_500"
-                    app:srcCompat="@drawable/ic_favorite_border_12"
-                    app:tint="@color/white" />
-
                 <TextView
                     android:id="@+id/txtEstadio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
                     android:alpha="0.5"
                     android:background="@color/fst_color"
                     android:padding="3dp"
@@ -80,6 +69,7 @@
             </RelativeLayout>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
                 android:layout_width="353dp"
                 android:layout_height="146dp"
                 android:layout_marginHorizontal="15dp"
@@ -87,6 +77,7 @@
                 android:backgroundTint="#f4f4f4"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
+                android:alpha="0.95"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -101,8 +92,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="36dp"
-                        android:textColor="@color/white"
                         android:gravity="center"
+                        android:textColor="@color/white"
                         app:layout_constraintEnd_toStartOf="@+id/imageLogoDos"
                         app:layout_constraintStart_toEndOf="@+id/imageLogoUno"
                         app:layout_constraintTop_toTopOf="parent"
@@ -139,11 +130,11 @@
                         android:layout_width="51dp"
                         android:layout_height="28dp"
                         android:layout_marginTop="12dp"
+                        android:gravity="center"
                         android:text="vs"
                         android:textColor="@color/white"
                         android:textSize="18dp"
                         android:textStyle="bold"
-                        android:gravity="center"
                         app:layout_constraintEnd_toStartOf="@+id/imageLogoDos"
                         app:layout_constraintStart_toEndOf="@+id/imageLogoUno"
                         app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
@@ -192,6 +183,37 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="250dp"
+                app:cardCornerRadius="58dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButtonItem"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        app:backgroundTint="@color/fst_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_favorite_border_12"
+                        app:tint="@color/white"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -207,266 +229,501 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:text="LOCALIDAD"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/cardView4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:text="COSTO"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/cardView4"
-                app:layout_constraintStart_toEndOf="@+id/textView3"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CANTIDAD"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/cardView4"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="344dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.482"
-                app:layout_constraintStart_toEndOf="@+id/textView6"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView4"
-                android:layout_width="342dp"
-                android:layout_height="201dp"
-                android:layout_marginTop="45dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.536"
+                app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <ImageView
+                    android:id="@+id/imageView3"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:alpha="0.2"
+                    android:background="@color/frth_color"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="16dp" />
 
-                    <ImageView
-                        android:id="@+id/imageView3"
+                <TextView
+                    android:id="@+id/txtSerie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="LOCACIÓN" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSerie">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:alpha="0.2"
-                        android:background="@color/frth_color"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:layout_editor_absoluteX="0dp" />
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="15dp"
-                        android:text="GENERAL"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:id="@+id/txtSerie1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Disponibles: "
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:text="TRIBUNA"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                        <TextView
+                            android:id="@+id/txtDispGeneral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/txtSerie1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="N°" />
 
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:text="PALCO"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/extendedFloatingActionButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="5dp"
+                            android:onClick="clickMinusGeneral"
+                            app:backgroundTint="@color/black"
+                            app:collapsedSize="20dp"
+                            app:icon="@drawable/ic_remove_18"
+                            app:iconSize="14dp"
+                            app:iconTint="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie1"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-                    <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:text="PROPIETARIO"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/extendedFloatingActionButton"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie1"
+                            android:text="0" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginBottom="15dp"
-                        android:text="SUITE/PALCO"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/extendedFloatingActionButton2"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="5dp"
+                            android:onClick="clickPlusGeneral"
+                            app:backgroundTint="@color/black"
+                            app:collapsedSize="20dp"
+                            app:icon="@drawable/ic_add_18"
+                            app:iconPadding="0dp"
+                            app:iconSize="14dp"
+                            app:iconTint="@color/white"
+                            app:layout_constraintStart_toEndOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie1"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-                    <androidx.constraintlayout.widget.Guideline
-                        android:id="@+id/guideline2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        app:layout_constraintGuide_begin="127dp" />
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="General"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintStart_toEndOf="@+id/extendedFloatingActionButton2"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie1" />
 
-                    <TextView
-                        android:id="@+id/txtCost1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-                        app:layout_constraintHorizontal_bias="0.406"
-                        app:layout_constraintStart_toStartOf="@+id/guideline2"
-                        app:layout_constraintTop_toTopOf="@+id/imageView3"
-                        tools:text="$ 0.00" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toStartOf="@+id/textView7"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie1"
+                            android:text="$ " />
 
-                    <TextView
-                        android:id="@+id/txtCost2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="24dp"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintStart_toStartOf="@+id/guideline2"
-                        app:layout_constraintTop_toBottomOf="@+id/txtCost1"
-                        tools:text="$ 0.00" />
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textView2"
+                            android:text="0.00" />
 
-                    <TextView
-                        android:id="@+id/txtCost3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="24dp"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintStart_toStartOf="@+id/guideline2"
-                        app:layout_constraintTop_toBottomOf="@+id/txtCost2"
-                        tools:text="$ 0.00" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/txtCost4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="24dp"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintStart_toStartOf="@+id/guideline2"
-                        app:layout_constraintTop_toBottomOf="@+id/txtCost3"
-                        tools:text="$ 0.00" />
+                </androidx.cardview.widget.CardView>
 
-                    <androidx.constraintlayout.widget.Guideline
-                        android:id="@+id/guideline3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        app:layout_constraintGuide_begin="228dp" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
-                    <TextView
-                        android:id="@+id/txtCant1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/guideline3"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="---" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/txtCant2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/guideline3"
-                        app:layout_constraintTop_toBottomOf="@+id/txtCant1"
-                        tools:text="---" />
+                        <TextView
+                            android:id="@+id/txtSerie3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Disponibles: "
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/txtCant3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/guideline3"
-                        app:layout_constraintTop_toBottomOf="@+id/txtCant2"
-                        tools:text="---" />
+                        <TextView
+                            android:id="@+id/txtDispTribuna"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/txtSerie3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="N°" />
 
-                    <TextView
-                        android:id="@+id/txtCant4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/guideline3"
-                        app:layout_constraintTop_toBottomOf="@+id/txtCant3"
-                        tools:text="---" />
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/extendedFloatingActionButton3"
+                            android:layout_width="34dp"
+                            android:layout_height="33dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="5dp"
+                            android:onClick="clickMinusTribuna"
+                            app:backgroundTint="@color/black"
+                            app:collapsedSize="20dp"
+                            app:icon="@drawable/ic_remove_18"
+                            app:iconSize="14dp"
+                            app:iconTint="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie3"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/extendedFloatingActionButton3"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie3"
+                            android:text="0" />
 
-            <Button
-                android:layout_width="148dp"
-                android:layout_height="44dp"
-                android:layout_marginTop="24dp"
-                android:text="Comprar"
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/extendedFloatingActionButton4"
+                            android:layout_width="34dp"
+                            android:layout_height="33dp"
+                            android:layout_marginTop="5dp"
+                            android:onClick="clickPlusTribuna"
+                            app:backgroundTint="@color/black"
+                            app:collapsedSize="20dp"
+                            app:icon="@drawable/ic_add_18"
+                            app:iconPadding="0dp"
+                            app:iconSize="14dp"
+                            app:iconTint="@color/white"
+                            app:layout_constraintStart_toEndOf="@+id/textView4"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie3"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Tribuna"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintStart_toEndOf="@+id/extendedFloatingActionButton4"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toStartOf="@+id/textView9"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie3"
+                            android:text="$ " />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie3"
+                            android:text="0.00" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtSerie5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Disponibles: "
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtDispPalco"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/txtSerie5"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="N°" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/extendedFloatingActionButton5"
+                            android:layout_width="34dp"
+                            android:layout_height="33dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="5dp"
+                            android:onClick="clickMinusPalco"
+                            app:backgroundTint="@color/black"
+                            app:collapsedSize="20dp"
+                            app:icon="@drawable/ic_remove_18"
+                            app:iconSize="14dp"
+                            app:iconTint="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie5"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/extendedFloatingActionButton5"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie5"
+                            android:text="0" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/extendedFloatingActionButton6"
+                            android:layout_width="34dp"
+                            android:layout_height="33dp"
+                            android:layout_marginTop="5dp"
+                            android:onClick="clickPlusPalco"
+                            app:backgroundTint="@color/black"
+                            app:collapsedSize="20dp"
+                            app:icon="@drawable/ic_add_18"
+                            app:iconPadding="0dp"
+                            app:iconSize="14dp"
+                            app:iconTint="@color/white"
+                            app:layout_constraintStart_toEndOf="@+id/textView6"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie5"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Palco"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintStart_toEndOf="@+id/extendedFloatingActionButton6"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="$ "
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toStartOf="@+id/textView10"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie5" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSerie5"
+                            android:text="0.00" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtSeri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Disponibles: "
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtDispPropietario"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/txtSeri"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="N°" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/extendedFloatingActionButto"
+                            android:layout_width="34dp"
+                            android:layout_height="33dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="5dp"
+                            android:onClick="clickMinusPropietario"
+                            app:backgroundTint="@color/black"
+                            app:collapsedSize="20dp"
+                            app:icon="@drawable/ic_remove_18"
+                            app:iconSize="14dp"
+                            app:iconTint="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSeri"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/textVie1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/extendedFloatingActionButto"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSeri"
+                            android:text="0" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/extendedFloatingActionButto1"
+                            android:layout_width="34dp"
+                            android:layout_height="33dp"
+                            android:layout_marginTop="5dp"
+                            android:onClick="clickPlusPropietario"
+                            app:backgroundTint="@color/black"
+                            app:collapsedSize="20dp"
+                            app:icon="@drawable/ic_add_18"
+                            app:iconPadding="0dp"
+                            app:iconSize="14dp"
+                            app:iconTint="@color/white"
+                            app:layout_constraintStart_toEndOf="@+id/textVie1"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSeri"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Propietario"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintStart_toEndOf="@+id/extendedFloatingActionButto1"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSeri" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="$ "
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toStartOf="@+id/textView11"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSeri" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSeri"
+                            android:text="0.00" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/floatingCart"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:text="Añadir al carrito"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:backgroundTint="@color/purple_500"
                 app:icon="@drawable/ic_cart_24"
-                app:layout_constraintEnd_toEndOf="@+id/cardView4"
-                app:layout_constraintStart_toStartOf="@+id/cardView4"
-                app:layout_constraintTop_toBottomOf="@+id/cardView4" />
-
-            <!--<Button
-                android:layout_width="59dp"
-                android:layout_height="44dp"
-                android:layout_marginTop="24dp"
-                app:icon="@drawable/ic_reply_black_24dp"
-                app:layout_constraintStart_toStartOf="@+id/cardView4"
-                app:layout_constraintTop_toBottomOf="@+id/cardView4" />-->
+                app:iconTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                tools:ignore="InvalidId,TouchTargetSizeCheck" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

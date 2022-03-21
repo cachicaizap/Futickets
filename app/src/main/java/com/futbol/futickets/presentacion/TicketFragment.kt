@@ -32,8 +32,8 @@ class TicketFragment : Fragment() {
         return binding.root
     }
 
-    override fun onStart() {
-        super.onStart()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.progressBar.visibility = View.VISIBLE
         lifecycleScope.launch(Dispatchers.Main) {
             val ltsPartidos = withContext(Dispatchers.IO){

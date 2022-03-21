@@ -26,8 +26,6 @@ class PartidoAdapter(val partidoItemList: List<PartidoEntity>, val onClickItemSe
     override fun getItemCount(): Int {
         return partidoItemList.size
     }
-
-
 }
 
 class PartidoViewHolder(partidoView: View) : RecyclerView.ViewHolder(partidoView){
@@ -37,7 +35,6 @@ class PartidoViewHolder(partidoView: View) : RecyclerView.ViewHolder(partidoView
     fun render(item: PartidoEntity, onClickItemSelected:(PartidoEntity) -> Unit){
         binding.txtEquipoUno.text = item.teamone
         binding.txtEquipoDos.text = item.teamtwo
-        binding.textBoolean.text = item.avaible.toString()
         binding.txtFecha.text = item.dateat
         binding.txtHora.text = item.timeat
         binding.txtRonda.text = item.rounds

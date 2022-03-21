@@ -3,51 +3,26 @@
 
     <group>
         <item
+            android:id="@+id/btnTicket"
             android:enabled="true"
             android:icon="@drawable/ic_ticket_24"
             android:title="Tickets"/>
         <item
+            android:id="@+id/btnConf"
             android:enabled="true"
             android:icon="@drawable/ic_settings_24"
-            android:title="Settings"/>
-        <item
-            android:enabled="true"
-            android:icon="@drawable/ic_settings_24"
-            android:title="Settings"/>
-        <item
-            android:enabled="true"
-            android:icon="@drawable/ic_settings_24"
-            android:title="Settings"/>
-        <item
-            android:enabled="true"
-            android:icon="@drawable/ic_settings_24"
-            android:title="Settings"/>
+            android:title="Configuración"/>
     </group>
 
     <group>
         <item
-            android:title="Subtitle">
+            android:title="Sesión">
             <menu>
                 <item
+                    android:id="@+id/btnReturn"
                     android:enabled="true"
-                    android:icon="@drawable/ic_ticket_24"
-                    android:title="Tickets"/>
-                <item
-                    android:enabled="true"
-                    android:icon="@drawable/ic_ticket_24"
-                    android:title="Tickets"/>
-                <item
-                    android:enabled="true"
-                    android:icon="@drawable/ic_ticket_24"
-                    android:title="Tickets"/>
-                <item
-                    android:enabled="true"
-                    android:icon="@drawable/ic_ticket_24"
-                    android:title="Tickets"/>
-                <item
-                    android:enabled="true"
-                    android:icon="@drawable/ic_ticket_24"
-                    android:title="Tickets"/>
+                    android:icon="@drawable/ic_reply_black_24dp"
+                    android:title="Cerrar Sesión"/>
             </menu>
         </item>
     </group>

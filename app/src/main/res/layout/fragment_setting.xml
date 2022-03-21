@@ -7,6 +7,7 @@
     tools:context=".presentacion.SettingFragment">
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:menu="@menu/navigation_drawer"
